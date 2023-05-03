@@ -48,4 +48,9 @@ public class AttendanceController {
 	public List<AttendanceDetails> getAttendanceless80(){
 		return as.getAttendanceless80();
 	}
+	
+	@GetMapping("attendancecomputerscience")
+	public List<AttendanceDetails> getAttendanceOfComputerScience(){
+		return as.getAttendanceOfComputerScience();
+	}
 }

@@ -48,4 +48,8 @@ public class AttendanceService {
 		
 		return arr;
 	}
+	
+	public List<AttendanceDetails> getAttendanceOfComputerScience(){
+		return ad.getAttendanceOfComputerScience();
+	}
 }

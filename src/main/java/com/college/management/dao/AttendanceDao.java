@@ -90,4 +90,17 @@ public class AttendanceDao {
 		s.getTransaction().commit();
 		return list;
 	}
+	
+	@SuppressWarnings({ "deprecation", "unchecked" })
+	public List<AttendanceDetails> getAttendanceOfComputerScience() {
+		Session s = sf.openSession();
+		s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(AttendanceDetails.class);
+		cr.add(Restrictions.like("branch", "computer science"));
+		List<AttendanceDetails> list = cr.list();
+		
+		s.getTransaction().commit();
+		return list;
+	}
 }
